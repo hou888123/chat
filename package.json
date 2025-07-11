@@ -1,0 +1,25 @@
+{
+  "name": "mcp-cursor-monorepo",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "cc",
+    "cs"
+  ],
+  "dependencies": {
+    "@tanstack/react-query": "^5.81.5",
+    "axios": "^1.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build:shared": "yarn workspace shared build",
+    "build:shared:assets": "yarn workspace shared build:assets",
+    "build:cc": "yarn workspace cc build",
+    "build:cs": "yarn workspace cs build",
+    "build:all": "yarn build:shared && yarn build:shared:assets && yarn build:cc && yarn build:cs",
+    "dev:cc": "yarn workspace cc dev",
+    "dev:cs": "yarn workspace cs dev"
+  }
+}
