@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 導入載入動畫樣式 */
+@import './loading-animations.css';
+
+/* 基本字體設置 */
+@layer base {
+  html {
+    font-family: 'Noto Sans TC', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 150%;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+}
+
+/* 共用組件樣式 */
+@layer components {
+  /* 輸入框相關樣式 */
+  .u-input-base {
+    @apply u-w-full u-px-4 u-py-2 u-border u-border-gray-300 u-rounded-md u-shadow-sm u-text-base;
+    @apply focus:u-ring-2 focus:u-ring-primary focus:u-border-primary focus:u-outline-none;
+  }
+  
+  /* 按鈕相關樣式 */
+  .u-btn-primary {
+    @apply u-bg-primary u-text-white u-px-4 u-py-2 u-rounded-md u-font-medium;
+    @apply hover:u-bg-primary-dark focus:u-outline-none focus:u-ring-2 focus:u-ring-primary focus:u-ring-opacity-50;
+  }
+  
+  .u-btn-secondary {
+    @apply u-bg-gray-100 u-text-gray-800 u-px-4 u-py-2 u-rounded-md u-font-medium;
+    @apply hover:u-bg-gray-200 focus:u-outline-none focus:u-ring-2 focus:u-ring-gray-400 focus:u-ring-opacity-50;
+  }
+  
+  /* 卡片樣式 */
+  .u-card {
+    @apply u-bg-white u-rounded-lg u-shadow-md u-p-4;
+  }
+  
+  /* 點讚/倒讚組件樣式 */
+  .u-feedback-option {
+    @apply u-border u-border-gray-300 u-rounded-md u-p-2 u-text-sm u-cursor-pointer;
+    @apply hover:u-border-primary hover:u-bg-primary-light/10;
+  }
+  
+  .u-feedback-option-selected {
+    @apply u-border-primary u-bg-primary-light/10;
+  }
+}

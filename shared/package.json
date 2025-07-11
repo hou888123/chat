@@ -1,0 +1,35 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/styles/index.css",
+  "scripts": {
+    "build": "tsc && node build-css.js",
+    "build:css": "node build-css.js",
+    "build:assets": "node build-assets.js",
+    "build:all": "yarn build && yarn build:assets",
+    "prepare": "yarn build:all"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "framer-motion": "^12.16.0",
+    "jotai": "^2.12.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.6",
+    "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
